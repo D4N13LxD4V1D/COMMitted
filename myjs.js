@@ -6,15 +6,16 @@ window.onload = function () {
         links = Array.from(links);
         links.push(logo);
 
-        if (window.scrollY > 30) {
-            navbar.style.transition = 'background-color 0.5s ease-in-out';
+        console.log(window.scrollY);
+        if (window.scrollY > 200) {
+            navbar.style.transition = 'background-color 0.2s ease-in-out';
             navbar.style.backgroundColor = 'white';
             navbar.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.2)';
             links.map(link => {
                 link.style.color = 'black';
             });
         } else {
-            navbar.style.transition = 'background-color 0.5s ease-in-out';
+            navbar.style.transition = 'background-color 0.2s ease-in-out';
             navbar.style.backgroundColor = 'transparent';
             navbar.style.boxShadow = '';
             navbar.style.color = '#fff';
