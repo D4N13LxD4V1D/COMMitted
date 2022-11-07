@@ -238,7 +238,7 @@ body {
 .blog-posts {
     height: 50vh;
     width: 90vw;
-    justify-self: center;
+    margin: auto;
     background: #fff;
     display: flex;
     flex-direction: row;
