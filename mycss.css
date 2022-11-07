@@ -237,12 +237,14 @@ body {
 
 .blog-posts {
     height: 50vh;
-    width: 90vw;
-    margin: auto;
+    width: 70vw;
+    margin: auto 15vw;
+    display: flex;
     background: #fff;
     display: flex;
     flex-direction: row;
     gap: 4vw;
+    justify-content: space-around;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
