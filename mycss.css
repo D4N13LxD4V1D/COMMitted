@@ -9,14 +9,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
     color: #fff;
-    height: 100vh;
-}
-
-.container {
-    scroll-snap-type: y proximity;
-    scroll-behavior: smooth;
-    height: 100vh;
-    overflow: scroll;
 }
 
 .navbar {
@@ -24,7 +16,7 @@ body {
     color: #fff;
     top: 0;
     width: 100vw;
-    height: 7vh;
+    height: 8vh;
     min-height: 60px;
     padding: 0 15vw;
     display: flex;
@@ -63,8 +55,7 @@ body {
     gap: 2vw;
 }
 
-.navbar .content a:hover,
-.navbar .content .active {
+.navbar .content a:hover {
     text-decoration: underline;
     text-decoration-thickness: 3px;
     text-underline-offset: 7px;
@@ -132,26 +123,17 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 100vh;
+    height: 527px;
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    scroll-snap-align: center;
+    padding: 0 15vw;
+    scroll-snap-align: start;
 }
 
 .hero-section h1 {
-    font-size: 92px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    transition: all 0.5s ease-in-out;
-}
-
-
-.hero-section h2 {
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 20px;
@@ -159,33 +141,54 @@ body {
 }
 
 .hero-section p {
-    width: 850px;
-    font-size: 20px;
+    width: 600px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.7;
     margin-bottom: 20px auto;
-    text-align: center;
     transition: all 0.5s ease-in-out;
+}
+
+.hero-section button {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    width: fit-content;
+    padding: 20px 50px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 40px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.hero-section button:hover {
+    background-color: #fff;
+    color: #000;
 }
 
 @media screen and (max-width: 1280px) {
     .hero-section h1 {
-        font-size: 72px;
-    }
-
-    .hero-section h2 {
         font-size: 20px;
     }
 
+    .hero-section button {
+        font-size: 15px;
+        padding: 15px 40px;
+    }
+
     .hero-section p {
-        width: 560px;
-        font-size: 16px;
+        width: 400px;
+        font-size: 14px;
     }
 }
 
 @media screen and (max-width: 760px) {
     .hero-section h1 {
-        font-size: 52px;
+        font-size: 20px;
     }
 
     .hero-section h2 {
@@ -236,7 +239,7 @@ body {
     font-size: 30px;
     font-weight: 700;
     line-height: 1.2;
-    margin: 0 auto;
+    margin-left: 15vw;
 }
 
 .blog-posts {
@@ -303,5 +306,9 @@ body {
 
 .blog-post .content a {
     color: #30bcb0;
+    text-decoration: none;
+}
+
+.blog-post .content a:hover {
     text-decoration: underline;
 }
