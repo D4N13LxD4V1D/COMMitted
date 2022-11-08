@@ -8,7 +8,7 @@ window.onload = function () {
         if (prevScrollpos > currentScrollPos || currentScrollPos < 100) {
             navbar.style.top = "0";
         } else {
-            navbar.style.top = "-10vh";
+            navbar.style.top = "-200px";
         }
 
         prevScrollpos = currentScrollPos;
