@@ -1,6 +1,18 @@
 window.onload = function () {
+    var prevScrollpos = window.pageYOffset;
     window.addEventListener('scroll', () => {
+        var currentScrollPos = window.pageYOffset;
+
         const navbar = document.getElementsByClassName('navbar')[0];
+
+        if (prevScrollpos > currentScrollPos || currentScrollPos < 100) {
+            navbar.style.top = "0";
+        } else {
+            navbar.style.top = "-10vh";
+        }
+
+        prevScrollpos = currentScrollPos;
+
         var links = navbar.getElementsByClassName('content')[0].getElementsByTagName('a');
         var logo = navbar.getElementsByClassName('logo')[0].getElementsByTagName('a')[0];
         links = Array.from(links);
@@ -8,8 +20,7 @@ window.onload = function () {
 
         var bars = Array.from([document.getElementsByClassName('bar1')[0], document.getElementsByClassName('bar2')[0], document.getElementsByClassName('bar3')[0]]);
 
-        console.log(window.scrollY);
-        if (window.scrollY > window.innerHeight / 3) {
+        if (window.pageYOffset > 150) {
             navbar.classList.add('navbar-scrolled');
             links.map(link => {
                 link.style.color = 'black';
