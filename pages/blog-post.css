@@ -177,7 +177,6 @@ body {
 }
 
 .blog-post .subtitle .by-line {
-    display: inline-block;
     color: rgb(40, 40, 40);
 }
 
@@ -207,15 +206,44 @@ body {
     width: 100vw;
     max-width: 1000px;
     height: 100%;
-    margin-bottom: 32px;
 }
 
 .blog-post .summary {
-    margin: 64px 0;
-    height: 86px;
-    overflow-y: auto;
+    margin: 4vw 0;
+    height: 90px;
+    overflow-y: hidden;
     font-size: 14px;
     color: rgb(80, 80, 80);
+    text-align: justify;
+    position: relative;
+}
+
+.blog-post .summary b {
+    font-weight: 700;
+    color: #000;
+}
+
+.blog-post .summary .read-more {
+    color: rgb(40, 40, 40);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: white;
+    padding-left: 4px;
+}
+
+.blog-post .summary .read-more a {
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #c3dddb;
+}
+
+.blog-post .summary .read-more a:hover {
+    color: rgb(80, 80, 80);
+    text-decoration: underline;
 }
 
 .blog-post .content {
@@ -223,6 +251,7 @@ body {
     line-height: 31px;
     font-size: 18px;
     letter-spacing: -0.5px;
+    text-align: justify;
 }
 
 .blog-post .content p {
