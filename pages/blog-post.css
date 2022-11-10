@@ -283,3 +283,9 @@ body {
         padding: 0 5vw;
     }
 }
+
+.fb-comments,
+.fb-comments iframe[style],
+.fb-comments span {
+    width: 100% !important;
+}
