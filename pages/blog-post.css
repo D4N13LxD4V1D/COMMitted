@@ -115,6 +115,10 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+.navbar .menu .content a {
+    color: white;
+}
+
 @media screen and (max-width: 760px) {
     .navbar {
         padding: 0 5vw;
