@@ -35,7 +35,6 @@ body {
     color: black;
     font-size: 13px;
     font-weight: 700;
-    font-weight: 500;
     line-height: 1.7;
     text-decoration-thickness: 0px;
     text-underline-offset: 0px;
@@ -117,6 +116,7 @@ body {
 
 .navbar .menu .content a {
     color: white;
+    font-weight: 700;
 }
 
 @media screen and (max-width: 760px) {
