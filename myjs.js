@@ -5,7 +5,7 @@ window.onload = function () {
 
         const navbar = document.getElementsByClassName('navbar')[0];
 
-        if (prevScrollpos > currentScrollPos || currentScrollPos < 100) {
+        if (prevScrollpos > currentScrollPos || currentScrollPos < 400) {
             navbar.style.top = "0";
         } else {
             navbar.style.top = "-200px";
