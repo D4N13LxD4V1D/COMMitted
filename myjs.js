@@ -46,3 +46,19 @@ function onMenuClick(x) {
     x.classList.toggle("menu-open");
     x.getElementsByClassName('content')[0].style.display = x.classList.contains('menu-open') ? 'flex' : 'none';
 }
+
+function showModal() {
+    var modal = document.getElementsByClassName('modal')[0];
+    modal.style.visibility = 'visible';
+
+    // when escape is pressed
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            modal.style.visibility = 'hidden';
+        }
+    });
+}
+
+function onModalClick(x) {
+    x.style.visibility = 'hidden';
+}
