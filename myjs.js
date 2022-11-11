@@ -60,3 +60,33 @@ function closeModal() {
         modal.style.display = 'none';
     }, 500);
 }
+
+function filterBlogs(x) {
+    var blogs = document.getElementsByClassName('blog-post');
+    for (var i = 0; i < blogs.length; i++) {
+        var tags = blogs[i]
+            .getElementsByClassName('content')[0]
+            .getElementsByClassName('category')[0]
+            .getElementsByTagName('a');
+
+        var show = false;
+        for (var j = 0; j < tags.length; j++) {
+            console.log(tags[j]);
+            if (tags[j].innerHTML == x) {
+                show = true;
+                break;
+            }
+        }
+
+        if (x == 'all') {
+            show = true;
+        }
+
+        if (show) {
+            blogs[i].style.display = 'block';
+        }
+        else {
+            blogs[i].style.display = 'none';
+        }
+    }
+}
