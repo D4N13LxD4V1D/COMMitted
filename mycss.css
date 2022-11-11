@@ -350,6 +350,7 @@ body {
     .blog-post .cover {
         width: 90vw;
         height: auto;
+        margin-bottom: 16px;
         float: inline-start;
     }
 }
