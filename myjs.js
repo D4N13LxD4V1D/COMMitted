@@ -13,31 +13,10 @@ window.onload = function () {
 
         prevScrollpos = currentScrollPos;
 
-        var links = navbar.getElementsByClassName('content')[0].getElementsByTagName('a');
-        var logo = navbar.getElementsByClassName('logo')[0].getElementsByTagName('a')[0];
-        links = Array.from(links);
-        links.push(logo);
-
-        var bars = Array.from([document.getElementsByClassName('bar1')[0], document.getElementsByClassName('bar2')[0], document.getElementsByClassName('bar3')[0]]);
-
-        if (window.pageYOffset > 150) {
-            navbar.classList.add('navbar-scrolled');
-            links.map(link => {
-                link.style.color = 'black';
-            });
-
-            bars.map(bar => {
-                bar.style.backgroundColor = 'black';
-            });
+        if (currentScrollPos > document.getElementsByClassName('hero-section')[0].offsetHeight - navbar.offsetHeight) {
+            document.getElementsByClassName('nav-break')[0].style.backgroundColor = '#014221';
         } else {
-            navbar.classList.remove('navbar-scrolled');
-            links.map(link => {
-                link.style.color = '#fff';
-            });
-
-            bars.map(bar => {
-                bar.style.backgroundColor = '#fff';
-            });
+            document.getElementsByClassName('nav-break')[0].style.backgroundColor = '#f3aa2c80';
         }
     });
 
@@ -51,7 +30,7 @@ window.onload = function () {
 
 function onMenuClick(x) {
     x.classList.toggle("menu-open");
-    x.getElementsByClassName('content')[0].style.display = x.classList.contains('menu-open') ? 'flex' : 'none';
+    x.getElementsByClassName('links')[0].style.display = x.classList.contains('menu-open') ? 'flex' : 'none';
 }
 
 function showModal(x) {
