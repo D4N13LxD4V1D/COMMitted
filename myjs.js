@@ -23,7 +23,10 @@ window.onload = function () {
     var modal = document.getElementsByClassName('modal')[0];
     modal.addEventListener('click', (e) => {
         if (e.target == modal) {
-            modal.style.top = '100vh';
+            modal.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+
+            var frame = modal.getElementsByClassName('frame')[0];
+            frame.style.top = '100vh';
         }
     });
 }
@@ -35,11 +38,25 @@ function onMenuClick(x) {
 
 function showModal(x) {
     var modal = document.getElementsByClassName('modal')[0];
-    modal.getElementsByTagName('iframe')[0].src = x;
-    modal.style.top = '0';
+    var frame = modal.getElementsByClassName('frame')[0];
+    modal.style.display = 'block';
+
+    setTimeout(() => {
+        modal.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+
+        frame.getElementsByTagName('iframe')[0].src = x;
+        frame.style.top = '0';
+    }, 0);
 }
 
 function closeModal() {
     var modal = document.getElementsByClassName('modal')[0];
-    modal.style.top = '100vh';
+    var frame = modal.getElementsByClassName('frame')[0];
+
+    modal.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+    frame.style.top = '100vh';
+
+    setTimeout(() => {
+        modal.style.display = 'none';
+    }, 500);
 }
