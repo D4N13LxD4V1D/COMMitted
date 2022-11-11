@@ -47,11 +47,11 @@ function onMenuClick(x) {
     x.getElementsByClassName('content')[0].style.display = x.classList.contains('menu-open') ? 'flex' : 'none';
 }
 
-function showModal() {
+function showModal(x) {
     var modal = document.getElementsByClassName('modal')[0];
+    modal.getElementsByTagName('iframe')[0].src = x;
     modal.style.visibility = 'visible';
 
-    // when escape is pressed
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             modal.style.visibility = 'hidden';
