@@ -40,6 +40,13 @@ window.onload = function () {
             });
         }
     });
+
+    var modal = document.getElementsByClassName('modal')[0];
+    modal.addEventListener('click', (e) => {
+        if (e.target == modal) {
+            modal.style.top = '100vh';
+        }
+    });
 }
 
 function onMenuClick(x) {
@@ -50,15 +57,10 @@ function onMenuClick(x) {
 function showModal(x) {
     var modal = document.getElementsByClassName('modal')[0];
     modal.getElementsByTagName('iframe')[0].src = x;
-    modal.style.visibility = 'visible';
-
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            modal.style.visibility = 'hidden';
-        }
-    });
+    modal.style.top = '0';
 }
 
-function onModalClick(x) {
-    x.style.visibility = 'hidden';
+function closeModal() {
+    var modal = document.getElementsByClassName('modal')[0];
+    modal.style.top = '100vh';
 }

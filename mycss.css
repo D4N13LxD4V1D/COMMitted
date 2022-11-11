@@ -321,7 +321,7 @@ body {
 
 .modal {
     position: fixed;
-    top: 0;
+    top: 100vh;
     left: 0;
     width: 100vw;
     height: 100vh;
@@ -330,7 +330,7 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 1;
-    visibility: collapse;
+    transition: top .5s ease-in-out;
 }
 
 .modal iframe {
@@ -338,4 +338,15 @@ body {
     max-width: 1000px;
     height: 90%;
     border: none;
+}
+
+@media screen and (max-width: 900px) {
+
+    .modal iframe {
+        position: absolute;
+        top: 10%;
+        left: 0;
+        width: 100%;
+        height: 90%;
+    }
 }
