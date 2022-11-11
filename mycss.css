@@ -255,6 +255,10 @@ body {
     object-fit: cover;
 }
 
+.blog-post .line-break {
+    display: none;
+}
+
 .modal {
     position: fixed;
     top: 100vh;
@@ -352,5 +356,9 @@ body {
         height: auto;
         margin-bottom: 16px;
         float: inline-start;
+    }
+
+    .blog-post .line-break {
+        display: block;
     }
 }
