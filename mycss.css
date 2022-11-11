@@ -190,7 +190,7 @@ body {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 5vh 5vw;
-    padding: 10vh 15vw;
+    padding: 15vh 15vw;
 }
 
 @media screen and (min-width: 1600px) {
@@ -202,9 +202,6 @@ body {
 .blog-post {
     width: 100%;
     height: fit-content;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     scroll-snap-align: center;
 }
@@ -254,6 +251,8 @@ body {
     width: 200px;
     height: 134px;
     cursor: pointer;
+    float: right;
+    object-fit: cover;
 }
 
 .modal {
@@ -345,11 +344,12 @@ body {
     .hero-section button {
         font-size: 15px;
         padding: 10px 30px;
-        margin: 0 auto;
         margin-top: 20px;
     }
 
     .blog-post .cover {
-        display: none;
+        width: 90vw;
+        height: auto;
+        float: inline-start;
     }
 }
