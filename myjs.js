@@ -61,32 +61,51 @@ function closeModal() {
     }, 500);
 }
 
+var filter = ['all'];
+
 function filterBlogs(x) {
+    if (x == 'all') {
+        filter = ['all'];
+    } else {
+        if (filter.includes('all')) {
+            filter = [];
+        }
+        if (filter.includes(x)) {
+            filter.splice(filter.indexOf(x), 1);
+        } else {
+            filter.push(x);
+        }
+    }
+
     var blogs = document.getElementsByClassName('blog-post');
+
     for (var i = 0; i < blogs.length; i++) {
         var tags = blogs[i]
             .getElementsByClassName('content')[0]
             .getElementsByClassName('category')[0]
-            .getElementsByTagName('a');
+            .getElementsByTagName('span');
 
-        var show = false;
-        for (var j = 0; j < tags.length; j++) {
-            console.log(tags[j]);
-            if (tags[j].innerHTML == x) {
-                show = true;
-                break;
-            }
-        }
-
-        if (x == 'all') {
-            show = true;
-        }
-
-        if (show) {
+        if (filter.includes('all')) {
             blogs[i].style.display = 'block';
+        } else {
+            var show = false;
+
+            for (var j = 0; j < tags.length; j++) {
+                if (filter.includes(tags[j].innerHTML)) {
+                    show = true;
+                }
+            }
+
+            blogs[i].style.display = show ? 'block' : 'none';
         }
-        else {
-            blogs[i].style.display = 'none';
+    }
+
+    var tags = document.getElementsByClassName('tags')[0];
+    for (var i = 0; i < tags.children.length; i++) {
+        if (filter.includes(tags.children[i].innerHTML)) {
+            tags.children[i].classList.add('active');
+        } else {
+            tags.children[i].classList.remove('active');
         }
     }
 }

@@ -220,6 +220,7 @@ body {
     cursor: pointer;
 }
 
+.blog-section .tags .active,
 .blog-section .tags .tag:hover {
     background-color: #f3aa2c;
 }
@@ -243,12 +244,13 @@ body {
     color: rgb(120, 120, 120);
 }
 
-.blog-post .category a {
+.blog-post .category span {
     text-decoration: none;
     color: rgb(40, 40, 40);
+    cursor: pointer;
 }
 
-.blog-post .category a:hover {
+.blog-post .category span:hover {
     color: rgb(80, 80, 80);
 }
 
