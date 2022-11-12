@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog Post | COMMitted</title>
+
+        <link rel="stylesheet" href="blog-post.css">
+        <script src="blog-post.js"></script>
+    </head>
+
+    <body>
+        <div class="blog-post">
+            <div class="tag">
+                <a onclick="filterBlogs('Media')">Media</a>,
+                <a onclick="filterBlogs('Politics')">Politics</a>, and
+                <a onclick="filterBlogs('Culture')">Culture</a>
+            </div>
+            <div class="title">On Media, Social Order, and Cultural Change</div>
+            <div class="subtitle">There is always a context to equate in every mass behavior; there is psychology to
+                unpack in this collectivity and its individuality within.
+                <span class="by-line">Written by <a onclick="gotoAuthor('Andrea')">Andrea C. Agetyeng</a> and
+                    <a onclick="gotoAuthor('Daniel')">Daniel David N. Bador</a></span>
+            </div>
+            <div class="date-published">Posted on November 11, 2022</div>
+            <img class="cover" src="img/cover5.png" alt="cover" />
+            <!-- <video autoplay muted controls>
+                <source src="img/Anti-theory.mp4" type="video/mp4">
+            </video> -->
+            <!-- <div class="summary">
+                <b>Summary.</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt
+                in culpa qui officia deserunt mollit anim id est laborum.<br />
+                <br />
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.<br />
+                <br />
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+                <span class="read-more">... <a onclick="readMore()">more</a></span>
+            </div> -->
+            <div class="content">
+                <p><b>Indeed, the media, the public, and its surrounding concepts,</b> went through such a long history.
+                    It was guarded and viewed differently as researchers and scholars critiqued and passed by. As
+                    dissected, its elements and constituents shed light on deeper and further understanding and
+                    comprehension, grasping the influence and role of the mass to mass media and mass media’s role in
+                    return. Once again, going back, we remember that the “mass” or the general public is far from just a
+                    blank rowdy crowd. There is always a context to equate in every mass behavior; there is psychology
+                    to unpack in this collectivity and its individuality within. Moreover, the crowd, apart from being
+                    psychological, is also sociological, as Reich stated. Moving forward, as technology (thank God for
+                    these instruments and mediums) advanced and mass beliefs and the widespread of opinion dissemination
+                    evolved to our now-called mass media.
+                </p>
+                <p>These new technologies have also enabled the mass to live richer and wealthier lives due to new
+                    opportunities and possibilities. On the other hand, reserved spaces for creative minorities have
+                    been seized and overruled, as further expounded a while back, the rise of the so-called ‘high
+                    culture’― elitism at its core. Thus, we can see how mass media alongside impacted and marked
+                    culture. Given all these theories and premises surrounding the society, its negatives and downsides
+                    affirm real democracy. The anti-theory states that people’s enjoyment of mass media as authentic
+                    culture gives hope for the long-assumed democracy. Now, as mass media is everywhere, we can see and
+                    understand not only how it is channeled, propagated, and produced. All the more, we can analyze and
+                    give light on why and how we consume this culture, looking through its context.
+                </p>
+                <p>With all of these, we have seen and are continually witnessing how the media and the masses together
+                    are continually evolving and shaping our culture today. In the same way, it also fuels and evolves
+                    our commitment not only to proper communication but also to effective communication. These,
+                    moreover, would be means of elevating the condition of the society and its betterment. The role of
+                    communication plays great significance in mass media and cultivating culture. We aim and aspire for
+                    effectiveness and efficaciousness of communication where information, correlation, entertainment,
+                    and such are produced and consumed by the people. We have come so far looking back to the past, from
+                    a negative outlook towards the masses to now with it being ubiquitous as integrated by media such
+                    that creating impact on the public. Nevertheless, there is still a long way to go, and there are
+                    more to fight and engage within our society. Thus, we recognize and hold on to the importance of
+                    media and communication as critical tools to assist us in these fights.
+                </p>
+            </div>
+        </div>
+
+        <div class="line-break"></div>
+
+        <div class="comments">
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = 'https://committed-upb.vercel.app/pages/blog5.html';  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = 'blog5'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+
+                (function () { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://committed-1.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered
+                    by Disqus.</a></noscript>
+        </div>
+    </body>
+
+</html>
