@@ -37,7 +37,6 @@ function addScrollFunction(gallery) {
     // add auto scroll to gallery
     var scroll = 0;
     var scrollInterval = setInterval(() => {
-        console.log(gallery.scrollLeft);
         // check if last image
         if (scroll >= images.length - 1) {
             scroll = 0;
