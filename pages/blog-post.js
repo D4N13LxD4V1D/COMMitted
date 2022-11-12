@@ -15,8 +15,38 @@ function readMore() {
     }
 }
 
-
 function filterBlogs(x) {
     parent.filterBlogs(x);
     parent.closeModal();
+}
+
+
+window.onload = function () {
+    // get all galleries
+    var galleries = document.getElementsByClassName('gallery');
+
+    // add scroll function to each gallery
+    for (var i = 0; i < galleries.length; i++) {
+        addScrollFunction(galleries[i]);
+    }
+}
+
+function addScrollFunction(gallery) {
+    var images = gallery.getElementsByTagName('img');
+
+    // add auto scroll to gallery
+    var scroll = 0;
+    var scrollInterval = setInterval(() => {
+        console.log(gallery.scrollLeft);
+        // check if last image
+        if (scroll >= images.length - 1) {
+            scroll = 0;
+            gallery.scrollLeft = 1;
+        } else {
+            scroll++;
+
+            // scroll to image
+            gallery.scrollLeft = images[scroll].offsetLeft;
+        }
+    }, 5000);
 }
