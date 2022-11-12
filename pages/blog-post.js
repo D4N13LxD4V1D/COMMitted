@@ -49,3 +49,8 @@ function addScrollFunction(gallery) {
         }
     }, 5000);
 }
+
+function gotoAuthor(x) {
+    parent.gotoAuthor(x);
+    parent.closeModal();
+}

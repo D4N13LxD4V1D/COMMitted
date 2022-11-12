@@ -109,3 +109,13 @@ function filterBlogs(x) {
         }
     }
 }
+
+function gotoAuthor(x) {
+    var author = document.getElementById(x);
+
+    // Scroll to author
+    window.scrollTo({
+        top: author.offsetTop - document.getElementsByClassName('navbar')[0].offsetHeight,
+        behavior: 'smooth'
+    });
+}
