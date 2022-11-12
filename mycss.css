@@ -549,7 +549,7 @@ body {
         display: block;
     }
 
-    .modal iframe {
+    .modal .frame iframe {
         position: absolute;
         top: 10%;
         left: 0;
