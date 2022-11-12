@@ -75,6 +75,9 @@ function filterBlogs(x) {
         } else {
             filter.push(x);
         }
+        if (filter.length == 0) {
+            filter = ['all'];
+        }
     }
 
     var blogs = document.getElementsByClassName('blog-post');
