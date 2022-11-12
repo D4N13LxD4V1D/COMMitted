@@ -39,10 +39,14 @@ body {
 }
 
 .blog-post .tag {
+    margin-bottom: 32px;
+}
+
+.blog-post .tag a {
     font-size: 16px;
     font-weight: 700;
     color: rgba(80, 80, 80);
-    margin-bottom: 32px;
+    text-decoration: none;
 }
 
 .blog-post .title {

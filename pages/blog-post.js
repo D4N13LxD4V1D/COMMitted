@@ -14,3 +14,9 @@ function readMore() {
         readMore.style.right = '0';
     }
 }
+
+
+function filterBlogs(x) {
+    parent.filterBlogs(x);
+    parent.closeModal();
+}
