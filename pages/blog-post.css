@@ -178,6 +178,15 @@ body {
     padding: 0 20px;
 }
 
+.blog-post .content a {
+    display: block;
+    margin: 0 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #f3aa2c80;
+}
+
 .blog-post .content .gallery {
     display: flex;
     flex-direction: row;
