@@ -35,17 +35,13 @@ function addScrollFunction(gallery) {
     var images = gallery.getElementsByTagName('img');
 
     // add auto scroll to gallery
-    var scroll = 0;
     var scrollInterval = setInterval(() => {
         // check if last image
-        if (scroll >= images.length - 1) {
-            scroll = 0;
+        if (gallery.scrollLeft >= images[0].width * (images.length - 1)) {
             gallery.scrollLeft = 1;
         } else {
-            scroll++;
-
-            // scroll to image
-            gallery.scrollLeft = images[scroll].offsetLeft;
+            if (gallery.querySelector(':hover') == null)
+                gallery.scrollLeft += images[0].width;
         }
     }, 5000);
 }
